@@ -71,7 +71,7 @@
 .group_1_img .ui {
 	padding: 1.5em 1.7em;
 	color:#fff;
-	background: #FF605F;
+	background: #6f5499;
 	float: left;
 	font-size: 2.8em;
 	font-weight: 900;
@@ -83,7 +83,7 @@
 }
 .group_1_img .ux {
 	padding: 1.5em 1.55em;
-	color: #5EC2E7;
+	color: #6f5499;
 	background: rgba(230, 231, 231, 0.56);
 	float: left;
 	font-size: 2.8em;
@@ -92,29 +92,29 @@
 	-webkit-border-radius: 120px;
 	-moz-border-radius: 120px;
 	-o-border-radius: 120px;
-	text-shadow: 0px 0px 2px #5EC2E7;
+	text-shadow: 0px 0px 2px #6f5499;
 	margin-left: -58px;
 }
 .group_1_img .fontend
 {
 	padding: 2.283em 0.4em;
 	font-size: 2.1em;
-	background: #34CF75;
+	background: #6f5499;
 	color: #FFF;
 	text-shadow: 0px 0px 2px #fff;
 }
 .group_1_img .core
 {
 	padding: 1.75em 1.2em;
-	background: #35AFBA;
+	background: #6f5499;
 	font-size: 2.5em;
 }
 .group_1_img .ui1
 {
 	padding: 1.5em 1.7em;
 	font-size: 2.8em;
-	color:#FF605F;
-	text-shadow: 0px 0px 2px #FF605F;
+	color:#6f5499;
+	text-shadow: 0px 0px 2px #6f5499;
 }
 .group_1_text {
 	float: right;
@@ -180,10 +180,10 @@
 	margin: 2em 0em;
 }
 .button_2 a{
-	border:2px solid #22A6BF;
+	border:2px solid #6f5499;
 	font-size: 1em;
 	padding: 0.6em 2.2em;
-	color: #22A6BF;
+	color: #6f5499;
 	border-radius: 5px;
 	-webkit-border-radius: 5px;
 	-o-border-radius: 5px;
@@ -191,7 +191,7 @@
 }
 .button_2 a:hover
 {
-	background: #22A6BF;
+	background: #6f5499;
 	color:#fff;
 }
 .brows_button_3
@@ -200,10 +200,10 @@
 	text-align: center;
 }
 .brows_button_3 a,.brows_button_4 a{
-	border:2px solid #55C1E5;
+	border:2px solid #6f5499;
 	font-size: 0.9em;
 	padding: 0.7em 1.5em;	
-	color: #5EC7E5;
+	color: #6f5499;
 	border-radius: 5px;
 	-webkit-border-radius: 5px;
 	-o-border-radius: 5px;
@@ -216,7 +216,7 @@
 }
 .brows_button_3 a:hover,.brows_button_4 a:hover
 {
-	background: #55C1E5;
+	background: #6f5499;
 	color:#fff;
 }
 /*****/
@@ -286,7 +286,7 @@
 	-moz-border-radius: 20px;
 	-o-border-radius: 20px;
 	border-radius: 20px;
-	background:#55C1E5;
+	background:#6f5499;
 }
 
 .owl-theme .owl-controls .owl-page.active span,
