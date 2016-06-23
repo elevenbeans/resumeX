@@ -70,8 +70,8 @@
 }
 .group_1_img .ui {
 	padding: 1.5em 1.7em;
-	color:#fff;
-	background: #6f5499;
+	color:#FFF;
+	background: #FF9933;
 	float: left;
 	font-size: 2.8em;
 	font-weight: 900;
@@ -83,7 +83,7 @@
 }
 .group_1_img .ux {
 	padding: 1.5em 1.55em;
-	color: #6f5499;
+	color: #FF9933;
 	background: rgba(230, 231, 231, 0.56);
 	float: left;
 	font-size: 2.8em;
@@ -92,29 +92,29 @@
 	-webkit-border-radius: 120px;
 	-moz-border-radius: 120px;
 	-o-border-radius: 120px;
-	text-shadow: 0px 0px 2px #6f5499;
+	text-shadow: 0px 0px 2px #FF9933;
 	margin-left: -58px;
 }
 .group_1_img .fontend
 {
 	padding: 2.283em 0.4em;
 	font-size: 2.1em;
-	background: #6f5499;
+	background: #FF9933;
 	color: #FFF;
 	text-shadow: 0px 0px 2px #fff;
 }
 .group_1_img .core
 {
 	padding: 1.75em 1.2em;
-	background: #6f5499;
+	background: #FF9933;
 	font-size: 2.5em;
 }
 .group_1_img .ui1
 {
 	padding: 1.5em 1.7em;
 	font-size: 2.8em;
-	color:#6f5499;
-	text-shadow: 0px 0px 2px #6f5499;
+	color:#FF9933;
+	text-shadow: 0px 0px 2px #FF9933;
 }
 .group_1_text {
 	float: right;
@@ -180,10 +180,10 @@
 	margin: 2em 0em;
 }
 .button_2 a{
-	border:2px solid #6f5499;
+	border:2px solid #FF9933;
 	font-size: 1em;
 	padding: 0.6em 2.2em;
-	color: #6f5499;
+	color: #FF9933;
 	border-radius: 5px;
 	-webkit-border-radius: 5px;
 	-o-border-radius: 5px;
@@ -191,7 +191,7 @@
 }
 .button_2 a:hover
 {
-	background: #6f5499;
+	background: #FF9933;
 	color:#fff;
 }
 .brows_button_3
@@ -200,10 +200,10 @@
 	text-align: center;
 }
 .brows_button_3 a,.brows_button_4 a{
-	border:2px solid #6f5499;
+	border:2px solid #FF9933;
 	font-size: 0.9em;
 	padding: 0.7em 1.5em;	
-	color: #6f5499;
+	color: #FF9933;
 	border-radius: 5px;
 	-webkit-border-radius: 5px;
 	-o-border-radius: 5px;
@@ -216,7 +216,7 @@
 }
 .brows_button_3 a:hover,.brows_button_4 a:hover
 {
-	background: #6f5499;
+	background: #FF9933;
 	color:#fff;
 }
 /*****/
@@ -286,7 +286,7 @@
 	-moz-border-radius: 20px;
 	-o-border-radius: 20px;
 	border-radius: 20px;
-	background:#6f5499;
+	background:#FF9933;
 }
 
 .owl-theme .owl-controls .owl-page.active span,

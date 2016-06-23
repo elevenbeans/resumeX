@@ -52,7 +52,7 @@ body {
 /*****/
 .content
 {
-	background: #573d7d;
+	background: #FF9933;
 }
 
 /*------- Skills rings-------*/
@@ -159,7 +159,7 @@ padding: 4em 0em;
 .timeline-label h4 {
     margin-top: 0;
     font-size: 1.9em;
-    color:#6f5499;
+    color:#FF9933;
     padding:1em 0em;
     font-weight: 600;
 }
