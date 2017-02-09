@@ -14,12 +14,12 @@
 </body>
 </html>
 <script type="text/javascript">
-	// 百度地图API功能
+	// 百度地图API功能  31.2273660000,121.3599980000
 	var map = new BMap.Map("allmap");    // 创建Map实例
-	var point = new BMap.Point(120.031573, 30.286273);
+	var point = new BMap.Point(121.35999, 31.227366);
 	map.centerAndZoom(point, 12);  // 初始化地图,设置中心点坐标和地图级别
 	map.addControl(new BMap.MapTypeControl());   //添加地图类型控件
-	map.setCurrentCity("西安");          // 设置地图显示的城市 此项是必须设置的
+	map.setCurrentCity("上海");          // 设置地图显示的城市 此项是必须设置的
 	map.enableScrollWheelZoom(true);     //开启鼠标滚轮缩放
 	
     map.centerAndZoom(point, 12);
