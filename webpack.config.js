@@ -29,7 +29,7 @@ var config = {
                 test: /\.less$/,
                 loader: ExtractTextPlugin.extract("style-loader","css-loader!less-loader")
             },
-            { test: /\.(png|jpg)$/, loader: 'url?limit=8192'}
+            { test: /\.(png|jpg|svg)$/, loader: 'url?limit=8192'}
         ]
     },
     devServer: {
