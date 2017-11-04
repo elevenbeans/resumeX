@@ -1,23 +1,157 @@
-html, body, #app {
+html, body, ul, #app {
 	height: 100%;
 	margin: 0;
 	padding: 0;
+	font-family: "Open Sans", "PingFang SC", "Hiragino Sans GB", "Microsoft Yahei", "Microsoft Jhenghei", sans-serif;;
 	background-color: #fafafa;
 }
+li{
+	list-style-type: none;
+}
 .app-wrapper {
-	height: 90vh;
-	padding: 5vh 0;
-
+	header{
+		overflow: hidden;
+		margin: 0 0 1vh 0;
+		padding: 0 1vh;
+		border-bottom: 1px solid #f1f1f1;
+	}
+	.app-mask{
+		position: absolute;
+		height: 100%;
+		width: 100%;
+		background-color: rgba(0, 0, 0, 0.2);
+		border-radius: 4vh;
+	}
+	.app-link, .app-social{
+		float: left;
+		width: 120px;
+		ul{
+			padding: 0;
+			display: flex;
+			text-align: center;
+			margin-top: 12px;
+			margin-bottom: 12px;
+			li{
+				flex: 1;
+				text-align: center;
+				list-style-type: none;
+				height: 21px;
+				a{
+					color: #000;
+					text-decoration: none;
+				}
+				&.github{
+					background: url(./img/github.svg) no-repeat center;
+				}
+				&.gmail{
+					background: url(./img/gmail.svg) no-repeat center;
+				}
+				&.juejin{
+					background: url(./img/juejin.svg) no-repeat center;
+				}
+				&.zhihu{
+					background: url(./img/zhihu.svg) no-repeat center;
+				}
+			}
+		}
+	}
+	.app-social {
+		float: right;
+		width: 150px;
+		ul{
+			li{
+				a{
+					display: inline-block;
+					width: 20px;
+					height: 20px;
+				}
+			}
+		}
+	}
 	.app-phone {
-		position: relative;
 		margin: 0 auto;
 		height: 90vh;
 		width: 44vh;
-
-		//  clip-path: inset(0px 460px 400px 460px); /* 或"none" */
 		background: url(./img/iphonex_large.svg) center center no-repeat;
-		.app-message {
-			padding: 48px 24px;
+		.phone-wrapper{
+			position: relative;
+			margin: 0 2vh;
+			overflow: hidden;
+			height: 87.7vh;
 		}
+		.app-message {
+			margin: 1vh 0 0 0;
+			.message-padding{
+				height: 8vh;
+			}
+			.message-content{
+				padding: 0 2vh;
+				height: 64.5vh;
+				overflow: auto;
+			}
+		}
+		.app-input-bar{
+			position: relative;
+			height: 6.5vh;
+			line-height: 6vh;
+			margin: 4vh;
+			padding: 0 2vh;
+			border-radius: 4vh 4vh 4vh 4vh;
+			border: #ccc solid 1px;
+			color: #999;
+			font-size: 14px;
+			background-color: #fff;
+			.app-input-button{
+				position: absolute;
+				right: 1.5vh;
+				top: 1vh;
+				display: inline-block;
+				background-color: #007aff;
+				width: 4vh;
+				height: 4vh;
+				border-radius: 2vh;
+			}
+			.input-arrow{
+				position: relative;
+				top: 0.5vh;
+				left: 1vh;
+				width: 2vh;
+				height: 3vh;
+				background: url(./img/arrow.svg) no-repeat center;
+			}
+		}
+		.app-input-pannel{
+			position: absolute;
+			bottom: 2.5vh;
+			border-radius: 0 0 4vh 4vh;
+			width: 100%;
+			animation: slideInUp 0.4s;
+			.app-input-options{
+				height: 100%;
+				background-color: transparent;
+				ul{
+					margin: 2vh 4vh 1vh 4vh;
+					border-radius: 2vh;
+  				li{
+						padding: 1vh 0;
+						text-align: center;
+						color: #333;
+						font-size: 14px;
+						border-bottom: solid 1px #ccc;
+						&:last-child{
+							border-bottom: 0;
+						}
+					}
+				}
+			}
+		}		
 	}
+}
+@-webkit-keyframes slideInUp {
+  0% {
+		transform: translateY(100%);
+  }
+  100% {
+		transform: translateY(0%);
+  }
 }
