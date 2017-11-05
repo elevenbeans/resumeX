@@ -1,5 +1,4 @@
 html, body, ul, #app {
-	height: 100%;
 	margin: 0;
 	padding: 0;
 	font-family: "Open Sans", "PingFang SC", "Hiragino Sans GB", "Microsoft Yahei", "Microsoft Jhenghei", sans-serif;;
@@ -10,10 +9,15 @@ li{
 }
 .app-wrapper {
 	header{
+		position: -webkit-sticky;
+		position: fixed;
+		top: 0;
 		overflow: hidden;
+		width: 100%;
 		margin: 0 0 1vh 0;
 		padding: 0 1vh;
 		border-bottom: 1px solid #f1f1f1;
+		background-color: #fafafa;
 	}
 	.app-mask{
 		position: absolute;
@@ -69,7 +73,7 @@ li{
 		}
 	}
 	.app-phone {
-		margin: 0 auto;
+		margin: 54px auto 0 auto;
 		height: 90vh;
 		width: 44vh;
 		background: url(./img/iphonex_large.svg) center center no-repeat;
