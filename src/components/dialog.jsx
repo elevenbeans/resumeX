@@ -3,6 +3,8 @@ import Loading from './loading';
 
 import './dialog.less';
 
+console.log(Loading);
+
 const Dialog = (props) => (
 	<div className='app-lialog'>
 		{
@@ -13,10 +15,11 @@ const Dialog = (props) => (
 							item.isUser ? "msg-in-right" : "msg-in-left"
 						}
 					>
-						<div className = "item" >
-							{
-								item.text
-							}
+						<div
+							className = "item"
+							dangerouslySetInnerHTML = {{
+								__html: item.text ? item.text : Loading
+							}}>
 						</div>
 					</div>
 				</div>

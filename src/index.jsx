@@ -18,43 +18,57 @@ class App extends Component {
     this.state = {
     	inputPannelOn: false,
     	messageArr: [],
-    	pannelArr: []
+    	pannelArr: [],
+    	preId: 1000,
+    	status: '对方正在输入 ...',
+    	inputDisabled: true
     };
   }
   componentDidMount = () => {
-  	this.setState(() => ({
+  	this.initMessage();
+  }
+  getRandomWaitingSec = () => Math.floor(Math.random() * 4 + 1) * 1000
+  initMessage = () => {
+  	this.setState({
   		messageArr: [
   			{
   				isUser: false,
-  				text: this.findSentence(1000)
-  					.details.join()
+  				text: ''
+  			}
+  		],
+  		pannelArr: Data.fromUser
+  	}, () => {
+  		setTimeout(
+  			() => this.getFirstMessage(1000),
+  			this.getRandomWaitingSec()
+  		);
+  	});
+  	
+  }
+  getFirstMessage = id => {
+  	this.setState({
+  		messageArr: [
+  			{
+  				isUser: false,
+  				text: this.findSentence(id)
+  					.details.join('')
   			}
   		],
   		pannelArr: 
-  			this.findSentence(1000).responses ||
+  			this.findSentence(id).responses ||
   			Data.fromUser,
-  		preId: 1000
-  	}));
-  }
-  findSentence = id => {
-  	return Data.fromElevenBeans.find((item) => (
-  		item.id == id
-  	));
-  }
-  showInputPannel = () => {
-  	this.setState({
-  		inputPannelOn: true
+  		status: '请输入 ...',
+  		inputDisabled: false
   	});
   }
-  closeInputPannel = () =>{
-	  this.setState({
-			inputPannelOn: false
-		});
-  }
-  selectResponce = (id, index) => {
+  selectResponce = (id, index, hasMore) => {
+  	var _emptySentence = {
+  		isUser: false,
+  		text: ''
+  	};
   	var _mySentence = {
   		isUser: false,
-  		text: this.findSentence(id).details.join()
+  		text: this.findSentence(id).details.join('')
   	};
   	var _userSentence = {
   		isUser: true,
@@ -69,29 +83,81 @@ class App extends Component {
   			:
   			Data.fromUser[index].content
   		]
+  	};
+  	var tempArr = [];
+  	if(hasMore) {
+  		tempArr = [
+  			...this.state.messageArr,
+  			_emptySentence
+  		];
+  	} else {
+  		tempArr = [
+  			...this.state.messageArr,
+  			_userSentence,
+  			_emptySentence
+  		];
   	}
-  	// console.log(_userSentence);
+  	this.setState({
+  		messageArr: tempArr,
+  		preId: id,
+  		status: '对方正在输入 ...',
+  		inputDisabled: true
+  	},() => {
+  		this.scrollBottom();
+  		setTimeout(
+  			() => this.getRestMessage(id, index, _mySentence, _userSentence),
+  			this.getRandomWaitingSec()
+  		);
+  	});
+  	
+  }
+  getRestMessage = (id, index, mySentence, userSentence) => {
+  	this.state.messageArr.pop();
   	this.setState({
   		messageArr: [
   			...this.state.messageArr,
-  			_userSentence,
-  			_mySentence
+  			mySentence
   		],
   		pannelArr: this.findSentence(id).responses ||
   		  Data.fromUser,
-  		preId: id
+  		preId: id,
+  		status: '请输入 ...',
+  		inputDisabled: false
   	},() => {
   		this.scrollBottom();
+  		if(this.findSentence(id).hasMore) {
+  			// debugger
+  			this.selectResponce(
+  				this.findSentence(id).hasMore,
+  				index,
+  				true
+  			);
+  		}
   	});
+  }
+  findSentence = id => {
+  	return Data.fromElevenBeans.find((item) => (
+  		item.id == id
+  	));
   }
   scrollBottom(){
     var _el = document.getElementById("J_scroll");
-    _el.scrollTop = _el.scrollHeight + 1000;
-    console.log('top:',_el.scrollTop);
-    console.log('height:',_el.scrollHeight);
+    _el.scrollTop = _el.scrollHeight;
 	}
+	showInputPannel = () => {
+		if (!this.state.inputDisabled) {
+			this.setState({
+  			inputPannelOn: true
+  		});
+		}
+  }
+  closeInputPannel = () =>{
+	  this.setState({
+			inputPannelOn: false
+		});
+  }
 	render() {
-		console.log(this.state.messageArr);
+		// console.log(this.state.messageArr);
 		return (
 			<div className = "app-wrapper">
 	    	<AppHeader></AppHeader>
@@ -102,7 +168,9 @@ class App extends Component {
 			    			<div className = "app-mask"></div>
 		    				<InputPannel
 		    					closeInputPannel = {this.closeInputPannel}
-		    					selectResponce = {this.selectResponce}
+		    					selectResponce = {
+		    						this.selectResponce
+		    					}
 		    					pannelArr = {this.state.pannelArr}
 		    					preId = {this.state.preId}
 		    				/>
@@ -121,7 +189,7 @@ class App extends Component {
 		    				className = "app-input-bar"
 		    				onClick = {this.showInputPannel}
 		    			>
-		    				请输入 ...
+		    				{this.state.status}
 		    				<div className  = "app-input-button">
 		    					<div className = "input-arrow"></div>
 		    				</div>
