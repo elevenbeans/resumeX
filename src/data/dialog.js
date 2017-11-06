@@ -80,7 +80,7 @@ export default {
             id: 2001,
             details: [
                 "可是我买了！哈哈哈哈哈！！！",
-                "不过，IponeX 带给我可多烦恼了 ..."
+                "不过，IPhoneX 带给我可多烦恼了 ..."
             ],
             responses: [
                 {
