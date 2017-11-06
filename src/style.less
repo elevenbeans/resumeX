@@ -22,6 +22,7 @@ li{
 	}
 	.app-mask{
 		position: absolute;
+		z-index: 9;
 		height: 100%;
 		width: 100%;
 		background-color: rgba(0, 0, 0, 0.2);
@@ -90,7 +91,7 @@ li{
 				height: 8vh;
 			}
 			.message-content{
-				padding: 0 2vh;
+				padding: 0 1vh;
 				height: 64.5vh;
 				overflow: auto;
 			}
@@ -100,7 +101,7 @@ li{
 			height: 6.5vh;
 			line-height: 6vh;
 			margin: 4vh;
-			padding: 0 2vh;
+			padding: 0 3vh;
 			border-radius: 4vh 4vh 4vh 4vh;
 			border: #ccc solid 1px;
 			color: #999;
@@ -108,8 +109,8 @@ li{
 			background-color: #fff;
 			.app-input-button{
 				position: absolute;
-				right: 1.5vh;
-				top: 1vh;
+		    right: 2vh;
+		    top: 1.1vh;
 				display: inline-block;
 				background-color: #007aff;
 				width: 4vh;
@@ -127,6 +128,7 @@ li{
 		}
 		.app-input-pannel{
 			position: absolute;
+			z-index: 99;
 			bottom: 2.5vh;
 			border-radius: 0 0 4vh 4vh;
 			width: 100%;

@@ -3,8 +3,6 @@ import Loading from './loading';
 
 import './dialog.less';
 
-console.log(Loading);
-
 const Dialog = (props) => (
 	<div className='app-lialog'>
 		{
@@ -21,6 +19,7 @@ const Dialog = (props) => (
 								__html: item.text ? item.text : Loading
 							}}>
 						</div>
+						<div className = "pointer"></div>
 					</div>
 				</div>
 			))
