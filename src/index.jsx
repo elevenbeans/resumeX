@@ -96,19 +96,29 @@ class App extends Component {
   			_userSentence,
   			_emptySentence
   		];
+      this.setState({
+        messageArr: [
+          ...this.state.messageArr,
+          _userSentence
+        ]
+      });
   	}
-  	this.setState({
-  		messageArr: tempArr,
-  		preId: id,
-  		status: '对方正在输入 ...',
-  		inputDisabled: true
-  	},() => {
-  		this.scrollBottom();
-  		setTimeout(
-  			() => this.getRestMessage(id, index, _mySentence, _userSentence),
-  			this.getRandomWaitingSec()
-  		);
-  	});
+    setTimeout( () => {
+      	this.setState({
+      		messageArr: tempArr,
+      		preId: id,
+      		status: '对方正在输入 ...',
+      		inputDisabled: true
+      	},() => {
+      		this.scrollBottom();
+      		setTimeout(
+      			() => this.getRestMessage(id, index, _mySentence, _userSentence),
+      			this.getRandomWaitingSec()
+      		);
+      	});
+      },
+      1000
+    )
   	
   }
   getRestMessage = (id, index, mySentence, userSentence) => {
