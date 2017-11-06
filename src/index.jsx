@@ -101,6 +101,8 @@ class App extends Component {
           ...this.state.messageArr,
           _userSentence
         ]
+      }, () => {
+        this.scrollBottom();
       });
   	}
     setTimeout( () => {
