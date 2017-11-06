@@ -40,7 +40,7 @@ class App extends Component {
   	}, () => {
   		setTimeout(
   			() => this.getFirstMessage(1000),
-  			this.getRandomWaitingSec()
+  			this.getRandomWaitingSec() // mock 请求返回时间
   		);
   	});
   	
@@ -85,7 +85,7 @@ class App extends Component {
   		]
   	};
   	var tempArr = [];
-  	if(hasMore) {
+  	if (hasMore) {
   		tempArr = [
   			...this.state.messageArr,
   			_emptySentence
@@ -113,13 +113,12 @@ class App extends Component {
       		this.scrollBottom();
       		setTimeout(
       			() => this.getRestMessage(id, index, _mySentence, _userSentence),
-      			this.getRandomWaitingSec()
+      			this.getRandomWaitingSec() // mock 请求返回时间
       		);
       	});
       },
-      1000
+      1000 // mock 我的响应时间
     )
-  	
   }
   getRestMessage = (id, index, mySentence, userSentence) => {
   	this.state.messageArr.pop();
