@@ -3,7 +3,7 @@ id 命名规则：
 1XXX: 我发起的第一层对话如 1000，1001
 2XXX: 我发起的第二层对话如 2000，2001
 3XXX: 我发起的第二层对话如 3000，3001
-NXXXX: 第 N 层对话的连接对话 (多一位数)
+NXXXX: 我发起的第 N 层对话的连接对话 (多一位数)
 9XXX: 默认用户发起的对话如 3000，3001
 ***/
 export default {
@@ -172,6 +172,13 @@ export default {
             id: 40022,
             details: [
                 '<img src = "./src/img/rocker0.jpeg" />'
+            ],
+            hasMore: 40023
+        },
+        { // miao
+            id: 40023,
+            details: [
+                '图发多了哈。。不好意思，提起 TA 们我就忍不住哈哈 ～'
             ]
         },
         { // bye
