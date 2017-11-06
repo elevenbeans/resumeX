@@ -197,6 +197,11 @@ class App extends Component {
 	    			}
 	    		</div>
 	    	</div>
+        <footer>Elevenbeans' site. Inspired by&nbsp;
+          <a href = "https://github.com/Ovilia" target = "_blank">
+            Ovilia
+          </a>
+        </footer>
 	    </div>
 		)
 	}

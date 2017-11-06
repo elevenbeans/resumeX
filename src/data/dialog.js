@@ -11,7 +11,7 @@ export default {
         {
             id: 1000,
             details: [
-                "Hello 老铁，很高兴你能来看看，随便聊会儿天呗！IphoneX 你感觉如何？"
+                "Hello 老铁，很高兴你能来看看，随便聊会儿天呗！IPhoneX 你感觉如何？"
             ],
             responses: [
                 {

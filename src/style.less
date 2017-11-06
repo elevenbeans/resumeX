@@ -7,10 +7,15 @@ html, body, ul, #app {
 li{
 	list-style-type: none;
 }
+a {
+	text-decoration: none;
+	color: #007aff;
+}
 .app-wrapper {
 	header{
 		position: -webkit-sticky;
 		position: fixed;
+		box-sizing: border-box;
 		z-index: 999;
 		top: 0;
 		overflow: hidden;
@@ -152,6 +157,12 @@ li{
 				}
 			}
 		}		
+	}
+	footer{
+		color: #333;
+    font-size: 14px;
+    text-align: center;
+    padding: 9px;
 	}
 }
 @-webkit-keyframes slideInUp {
