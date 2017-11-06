@@ -59,7 +59,7 @@ export default {
         { // yes
             id: 20000,
             details: [
-                "你能猜猜，目前 IponeX 带给我最大的烦恼是什么不？"
+                "你能猜猜，目前 IPhoneX 带给我最大的烦恼是什么不？"
             ],
             responses: [
                 {
