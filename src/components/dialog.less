@@ -1,0 +1,57 @@
+.app-lialog{
+	font-size: 12px;
+	.item{
+		border-radius: 6px;
+		max-width: 150px;
+		margin: 3px 7px;
+		padding: 8px;
+	}
+	.pointer{
+		position: absolute;
+		bottom: 6px;
+		width: 0px;
+		height: 0px;
+		border-width: 4px;
+		border-style: solid;
+	}
+	.msg-in-left{
+		overflow: hidden;
+		position: relative;
+		.item{
+			background-color: #dcdcdc;
+			float: left;
+			transition: width 0.2s;
+			a{
+				display: block;
+				word-wrap: break-word;
+			}
+			img{
+				margin-top: 9px;
+				display: block;
+				width: 100%;
+				// border-radius: 6px;
+				box-sizing: border-box;
+				border: solid #fff 8px;
+    		box-shadow: 2px 2px 2px 1px #ccc;
+			}
+		}
+		.pointer{
+			left: 0px;
+			border-color: #fafafa #dcdcdc #dcdcdc #fafafa;
+		}
+	}
+	.msg-in-right{
+		overflow: hidden;
+		position: relative;
+		.item{
+			color: #fff;
+			background-color: #32CD32;
+			float: right;
+		}
+		.pointer{
+			bottom: 6px;
+			right: 0px;
+			border-color: #fafafa #fafafa #32cd32 #32cd32 ;
+		}
+	}
+}

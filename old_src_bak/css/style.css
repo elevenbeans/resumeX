@@ -52,9 +52,7 @@ body {
 /*****/
 .content
 {
-	background: url(../images/slider3.jpg) no-repeat;
-	background-size: 100%;
-	background-size:cover;
+	background: #FF9933;
 }
 
 /*------- Skills rings-------*/
@@ -153,6 +151,7 @@ body {
     border-color: rgba(255,255,255,0.5);
 }
 
+
 /*-------------Timeline-----*/
 .exper {
 padding: 4em 0em;
@@ -160,7 +159,7 @@ padding: 4em 0em;
 .timeline-label h4 {
     margin-top: 0;
     font-size: 1.9em;
-    color:#55C1E5;
+    color:#FF9933;
     padding:1em 0em;
     font-weight: 600;
 }
@@ -411,7 +410,6 @@ textarea
 	opacity:0.8;
 	display: block;
 	padding: 10px;
-	background: #2e2e2e;
 	width: 24px;
 	height: 24px;
 	-webkit-transition: all 0.3s ease-in-out;
@@ -639,7 +637,7 @@ textarea
 	}
 	.soc_icons ul li {
 	margin: 10px;
-	width: 17%;
+	width: 20%;
 	float: left;
 	}
 	.soc_icons ul li a span {
@@ -741,7 +739,7 @@ textarea
 	}
 	.soc_icons ul li {
 	margin: 0px;
-	width: 16%;
+	width: 30%;
 	float: left;
 	}
 	.soc_icons ul li a span {
@@ -749,7 +747,7 @@ textarea
 	font-size: 0.9em;
 	}
 	.soc_icons ul li {
-	width: 16%;
+	width: 30%;
 	margin-right: 20px;
 	}
 	.chart {
@@ -781,7 +779,7 @@ textarea
 		font-size: 2.5em;
 	}
 	.soc_icons ul li {
-	width: 26%;
+	width: 40%;
 	margin: 10px;
 	}
 	.copy p {
@@ -859,7 +857,7 @@ textarea
 	font-size: 0.8em;
 	}
 	.soc_icons ul li {
-	width: 40%;
+	width: 42%;
 	}
 	.plain li {
 	margin: 10px 20px;
