@@ -149,8 +149,29 @@ export default {
         { // miao
             id: 4002,
             details: [
-                "这个是我的🐱",
-                '<img src = "./src/img/us.jpg" />'
+                "这个是我的🐱：Jaber",
+                '<img src = "./src/img/jaber0.jpeg" />'
+            ],
+            hasMore: 40020
+        },
+        { // miao
+            id: 40020,
+            details: [
+                '<img src = "./src/img/jaber1.jpeg" />'
+            ],
+            hasMore: 40021
+        },
+        { // miao
+            id: 40021,
+            details: [
+                '怎么样!!! 可爱吧！还有一只: Rocker !!!'
+            ],
+            hasMore: 40022
+        },
+        { // miao
+            id: 40022,
+            details: [
+                '<img src = "./src/img/rocker0.jpeg" />'
             ]
         },
         { // bye
