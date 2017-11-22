@@ -14,7 +14,7 @@ import './style/index.less';
 const App  = () =>
 (
 	<div className = "app-wrapper">
-  	<AppHeader></AppHeader>
+  	<AppHeader />
   	<AppContent />
     <AppFooter />
   </div>
