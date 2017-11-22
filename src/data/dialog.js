@@ -121,8 +121,10 @@ export default {
             details: [
                 '这个是我负责的航班动态: ',
                 '<a href="https://english.ctrip.com/flightsh5/status/" target="_blank">https://english.ctrip.com/flightsh5/status/</a>',
-                '这个是我们团队的 Web APP: ',
+                '<img src = "./src/img/flight-status.png" />',
+                '<br />这个是我们团队的 Web APP: ',
                 '<a href="https://english.ctrip.com/m/flights/" target="_blank">https://english.ctrip.com/m/flights/</a>',
+                '<img src = "./src/img/flight-main.png" />',
                 '<br />职业，显而易见了吧？'
             ]
         },

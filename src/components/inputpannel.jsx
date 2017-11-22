@@ -12,7 +12,6 @@ class InputPannel extends Component {
   	this.props.selectResponce(id, index);
   }
   render() {
-  	// console.log(Data);
 		return (
 			<div
 				className = "app-input-pannel"
