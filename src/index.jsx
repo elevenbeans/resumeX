@@ -5,6 +5,7 @@ import ReactDom from 'react-dom';
 import Dialog from './components/dialog';
 import AppHeader from './components/header';
 import InputPannel from './components/inputpannel';
+import AppFooter from './components/footer';
 
 import Data from './data/dialog';
 
@@ -208,11 +209,7 @@ class App extends Component {
 	    			}
 	    		</div>
 	    	</div>
-        <footer>Elevenbeans' site. Inspired by&nbsp;
-          <a href = "https://github.com/Ovilia" target = "_blank">
-            Ovilia
-          </a>
-        </footer>
+        <AppFooter />
 	    </div>
 		)
 	}
