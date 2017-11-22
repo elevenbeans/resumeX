@@ -1,6 +1,7 @@
 // Map Redux state to component props
 import { connect } from 'react-redux'
-import { increaseAction, showInputPannelAction} from '../actions/content';
+import { showInputPannelAction } from '../actions/content';
+import { closeInputPannelAction, selectResponce} from '../actions/inputpannel';
 
 import Content from '../components/content';
 
@@ -18,7 +19,9 @@ function mapStateToProps(state) {
 // Map Redux actions to component props
 function mapDispatchToProps(dispatch) {
   return {
-    onShowInputPannel: () => dispatch(showInputPannelAction())
+    onShowInputPannel: () => dispatch(showInputPannelAction()),
+    onCloseInputPannel: () => dispatch(closeInputPannelAction()),
+    onSelectResponce: () => dispatch(selectResponce())
   }
 }
 

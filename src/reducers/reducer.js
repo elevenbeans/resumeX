@@ -19,10 +19,11 @@ const reducer = (state = DEFAULT_VALUE, action) => {
       return {
       	inputPannelOn: false
       }
-    case 'HIDE_PANNEL':
+    case 'SELECT_RESPONCE':
       return {
-      	inputPannelOn: false
-     	}
+        inputPannelOn: false
+      }
+    
     default:
       return state;
   }

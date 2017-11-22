@@ -5,14 +5,15 @@ class InputPannel extends Component {
 	constructor(props) {
 		super(props);
   }
-  // closeInputPannel = () => {
-	 //  this.props.closeInputPannel();
-  // }
-  selectResponce = (id, index) => {
-  	this.props.selectResponce(id, index);
+  onSelectResponce = (id, index) => {
+  	this.props.onSelectResponce(id, index);
   }
   render() {
-  	const {pannelArr, onCloseInputPannel, onSelectResponce} = this.props;
+  	const {
+  		pannelArr,
+  		onCloseInputPannel,
+  		onSelectResponce
+  	} = this.props;
 		return (
 			<div
 				className = "app-input-pannel"
@@ -29,12 +30,12 @@ class InputPannel extends Component {
 				<div className = "app-input-options">
 					<ul>
 						{
-							pannelArr.map((item, index) => (
+							this.props.pannelArr.map((item, index) => (
 								<li
 									key = {index}
 									onClick = {
 										() => (
-											onSelectResponce(
+											this.onSelectResponce(
 												item.nextElevenbeans, index
 											)
 										)

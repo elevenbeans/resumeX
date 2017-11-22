@@ -167,7 +167,8 @@ class AppContent extends Component {
       messageArr,
       status,
       onShowInputPannel,
-      selectResponce
+      onCloseInputPannel,
+      onSelectResponce
     } = this.props;
 		
     return (
@@ -177,9 +178,11 @@ class AppContent extends Component {
     				<div>
 		    			<div className = "app-mask"></div>
 	    				<InputPannel
-                closeInputPannel = {this.closeInputPannel}
-                selectResponce = {
-                  this.selectResponce
+                onCloseInputPannel = {onCloseInputPannel}
+                onSelectResponce = { 
+                  
+                    this.selectResponce
+                  
                 }
                 pannelArr = {this.state.pannelArr}
                 preId = {this.state.preId}

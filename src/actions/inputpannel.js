@@ -4,7 +4,7 @@ export const closeInputPannelAction = text => {
 		text
 	};
 }
-export const onSelectResponce = text => {
+export const selectResponce = text => {
 	return {
 		type: 'SELECT_RESPONCE',
 		text
