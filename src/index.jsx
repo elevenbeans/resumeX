@@ -1,26 +1,61 @@
-'use strict';
+import React, { Component } from 'react'
+// import PropTypes from 'prop-types'
+import ReactDOM from 'react-dom'
+import { createStore } from 'redux'
+import { Provider, connect } from 'react-redux'
 
-import React, { Component } from 'react';
-import ReactDom from 'react-dom';
+import reducer from './reducers/reducer';
 
 import AppHeader from './components/header';
-import AppContent from './components/content';
+import AppContent from './containers/content';
 import AppFooter from './components/footer';
 
 import './style/index.less';
 
-// 关闭 HMR 调整 CSS，开启调整 JS
-// if (module.hot) module.hot.accept();
-const App  = () =>
-(
-	<div className = "app-wrapper">
+// React component
+const App = () =>	(
+  // const { value, onIncreaseClick } = this.props
+  <div className = "app-wrapper">
   	<AppHeader />
   	<AppContent />
     <AppFooter />
   </div>
 )
 
-// 最终渲染
-ReactDom.render((
-	<App />
-), document.getElementById('app'));
+// Counter.propTypes = {
+//   value: PropTypes.number.isRequired,
+//   onIncreaseClick: PropTypes.func.isRequired
+// }
+
+// Action
+// const increaseAction = { type: 'increase' }
+
+// Store
+const store = createStore(reducer)
+
+// Map Redux state to component props
+// function mapStateToProps(state) {
+//   return {
+//     value: state.count
+//   }
+// }
+
+// // Map Redux actions to component props
+// function mapDispatchToProps(dispatch) {
+//   return {
+//     onIncreaseClick: () => dispatch(increaseAction)
+//   }
+// }
+
+// Connected Component
+// const App = connect(
+//   mapStateToProps,
+//   mapDispatchToProps
+// )(Resume)
+
+ReactDOM.render(
+  <Provider store={store}>
+    <App />
+  </Provider>,
+  document.getElementById('app')
+)

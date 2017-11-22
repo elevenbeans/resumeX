@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Dialog from './dialog';
+// import InputPannel from '../containers/inputpannel';
 import InputPannel from './inputpannel';
 
 import Data from '../data/dialog';
@@ -146,32 +147,42 @@ class AppContent extends Component {
     var _el = document.getElementById("J_scroll");
     _el.scrollTop = _el.scrollHeight;
 	}
-	showInputPannel = () => {
+	onShowInputPannel = () => {
 		if (!this.state.inputDisabled) {
 			this.setState({
   			inputPannelOn: true
   		});
 		}
   }
-  closeInputPannel = () =>{
+  onCloseInputPannel = () =>{
 	  this.setState({
 			inputPannelOn: false
 		});
   }
 	render() {
-		return (
+    let {
+      inputPannelOn,
+      pannelArr,
+      preId,
+      messageArr,
+      status,
+      onShowInputPannel,
+      selectResponce
+    } = this.props;
+		
+    return (
     	<div className = "app-phone" >
     		<div className = "phone-wrapper">
-    			{this.state.inputPannelOn &&
+    			{inputPannelOn &&
     				<div>
 		    			<div className = "app-mask"></div>
 	    				<InputPannel
-	    					closeInputPannel = {this.closeInputPannel}
-	    					selectResponce = {
-	    						this.selectResponce
-	    					}
-	    					pannelArr = {this.state.pannelArr}
-	    					preId = {this.state.preId}
+                closeInputPannel = {this.closeInputPannel}
+                selectResponce = {
+                  this.selectResponce
+                }
+                pannelArr = {this.state.pannelArr}
+                preId = {this.state.preId}
 	    				/>
     				</div>
     			}
@@ -183,10 +194,10 @@ class AppContent extends Component {
 	    				/>
 	    			</div>
 	    		</div>
-    			{!this.state.inputPannelOn &&
+    			{!inputPannelOn &&
     				<div
 	    				className = "app-input-bar"
-	    				onClick = {this.showInputPannel}
+	    				onClick = {onShowInputPannel}
 	    			>
 	    				{this.state.status}
 	    				<div className  = "app-input-button">
