@@ -35,7 +35,6 @@ class AppContent extends Component {
   			this.getRandomWaitingSec() // mock 请求返回时间
   		);
   	});
-  	
   }
   getFirstMessage = id => {
   	this.setState({
