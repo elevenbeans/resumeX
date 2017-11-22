@@ -106,7 +106,7 @@ class AppContent extends Component {
       	},() => {
       		this.scrollBottom();
       		setTimeout(
-      			() => this.getRestMessage(id, index, _mySentence, _userSentence),
+      			() => this.getRestMessage(id, index, _mySentence),
       			this.getRandomWaitingSec() // mock 请求返回时间
       		);
       	});
@@ -114,7 +114,7 @@ class AppContent extends Component {
       1000 // mock 我的响应时间
     )
   }
-  getRestMessage = (id, index, mySentence, userSentence) => {
+  getRestMessage = (id, index, mySentence) => {
   	this.state.messageArr.pop();
   	this.setState({
   		messageArr: [
@@ -129,7 +129,6 @@ class AppContent extends Component {
   	},() => {
   		this.scrollBottom();
   		if(this.findSentence(id).hasMore) {
-  			// debugger
   			this.selectResponce(
   				this.findSentence(id).hasMore,
   				index,

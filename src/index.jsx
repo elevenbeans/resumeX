@@ -11,8 +11,7 @@ import './style/index.less';
 
 // 关闭 HMR 调整 CSS，开启调整 JS
 // if (module.hot) module.hot.accept();
-const App  = () =>
-(
+const App  = () => (
 	<div className = "app-wrapper">
   	<AppHeader />
   	<AppContent />
