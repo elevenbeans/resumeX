@@ -1,6 +1,6 @@
 'use strict'
 
-import './loading.css';
+import '../style/loading.css';
 
 const Loading = `
 	<div

@@ -1,7 +1,7 @@
 'use strict'
 import Loading from './loading';
 
-import './dialog.less';
+import '../style/dialog.less';
 
 const Dialog = (props) => (
 	<div className='app-lialog'>
