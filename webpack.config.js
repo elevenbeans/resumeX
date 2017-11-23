@@ -22,6 +22,11 @@ var config = {
         loaders: [
             { test: /\.(js|jsx)$/, loader: "jsx!babel", include: /src/},
             {
+                test: /\.js$|\.jsx$/,
+                exclude: /node_modules/,
+                loader: 'eslint-loader'
+            },
+            {
                 test: /\.css$/,
                 loader: ExtractTextPlugin.extract("style-loader","css-loader")
             },
@@ -48,7 +53,10 @@ var config = {
     plugins: [
         new ExtractTextPlugin('style.css'),
         new webpack.HotModuleReplacementPlugin() //同命令行中的 --hot
-    ]
+    ],
+    eslint: {
+        configFile: './.eslintrc'
+    }
 
 }
 
