@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import Dialog from './dialog';
-// import InputPannel from '../containers/inputpannel';
 import InputPannel from './inputpannel';
 
 import Data from '../data/dialog';
@@ -103,7 +102,7 @@ class AppContent extends Component {
       		preId: id,
       		status: '对方正在输入 ...',
       		inputDisabled: true
-      	},() => {
+      	}, () => {
       		this.scrollBottom();
       		setTimeout(
       			() => this.getRestMessage(id, index, _mySentence, _userSentence),
@@ -129,7 +128,6 @@ class AppContent extends Component {
   	},() => {
   		this.scrollBottom();
   		if(this.findSentence(id).hasMore) {
-  			// debugger
   			this.selectResponce(
   				this.findSentence(id).hasMore,
   				index,
@@ -154,21 +152,11 @@ class AppContent extends Component {
   		});
 		}
   }
-  onCloseInputPannel = () =>{
-	  this.setState({
-			inputPannelOn: false
-		});
-  }
 	render() {
     let {
       inputPannelOn,
-      pannelArr,
-      preId,
-      messageArr,
-      status,
       onShowInputPannel,
       onCloseInputPannel,
-      onSelectResponce
     } = this.props;
 		
     return (
@@ -179,10 +167,8 @@ class AppContent extends Component {
 		    			<div className = "app-mask"></div>
 	    				<InputPannel
                 onCloseInputPannel = {onCloseInputPannel}
-                onSelectResponce = { 
-                  
+                onSelectResponce = {
                     this.selectResponce
-                  
                 }
                 pannelArr = {this.state.pannelArr}
                 preId = {this.state.preId}

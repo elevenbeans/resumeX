@@ -10,14 +10,9 @@ const DEFAULT_VALUE = {
 const reducer = (state = DEFAULT_VALUE, action) => {
   const count = state.count
   switch (action.type) {
-    case 'SHOW_PANNEL':
-    	// debugger
+    case 'TOGGLE_PANNEL':
       return {
-      	inputPannelOn: true
-      }
-    case 'HIDE_PANNEL':
-      return {
-      	inputPannelOn: false
+      	inputPannelOn: action.onSwitch
       }
     case 'SELECT_RESPONCE':
       return {
@@ -28,4 +23,5 @@ const reducer = (state = DEFAULT_VALUE, action) => {
       return state;
   }
 };
+
 export default reducer;

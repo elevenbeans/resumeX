@@ -1,7 +1,9 @@
+export const toggleInputPannelAction = onSwitch => ({
+	type: 'TOGGLE_PANNEL',
+	onSwitch
+})
 
-export const showInputPannelAction = text => {
-	return {
-		type: 'SHOW_PANNEL',
-		text
-	};
-}
+export const selectResponce = index => ({
+	type: 'SELECT_RESPONCE',
+	index
+})
