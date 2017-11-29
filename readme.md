@@ -2,7 +2,7 @@
 
 Please visit: <http://elevenbeans.me>, inspired by [Ovilia](https://github.com/Ovilia)
 
-![gif](./src/img/overview.gif)
+<img width="375px" src = "./src/img/overview.gif" />
 
 ## Credits
 
