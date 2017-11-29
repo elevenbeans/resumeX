@@ -4,7 +4,7 @@
 </h4>
 <h1 align="center">Elevenbeans 的个人主页</h1>
 
-<div align="center">Please visit: <a href="http://elevenbeans.me">http://elevenbeans.me</a>, inspired by <a href="https://github.com/Ovilia">Ovilia</a></div>
+<div align="center">A special resume/CV/page made with React and LESS. Please visit: <a href="http://elevenbeans.me">http://elevenbeans.me</a>, inspired by <a href="https://github.com/Ovilia">Ovilia</a></div>
 
 <h4 align="center">
 	 <img  width="320px" src = "./src/img/overview.gif" />
@@ -16,13 +16,15 @@
 
 + Run `npm install`.
 
-+ Customize your resume in the `./src` directory: edit your `data/dialog.js` and replace your img/*.jpg.
-
 + Preview resumes with `npm run dev`.
+
++ Customize your resume in the `./src` directory (components and styles)
+
++ Edit your `data/dialog.js` and replace your `img/*.jpg`.
 
 + build with `npm run build`.
 
-All files will be compiled to the `dist/` folder.
++ Publish with github pages.
 
 ## Credits
 
