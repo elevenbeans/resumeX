@@ -1,10 +1,28 @@
-<h1 align="center">Elevenbeans 的个人主页</h1>
-
-<h4 align="center">Please visit: <a href="http://elevenbeans.me">http://elevenbeans.me</a>, inspired by <a href="https://github.com/Ovilia">Ovilia</a></h4>
 
 <h4 align="center">
-	 <img  width="375px" src = "./src/img/overview.gif" />
+	 <img  width="75px" src = "https://raw.githubusercontent.com/elevenBeans/Grocery/master/logo.png" />
 </h4>
+<h1 align="center">Elevenbeans 的个人主页</h1>
+
+<div align="center">Please visit: <a href="http://elevenbeans.me">http://elevenbeans.me</a>, inspired by <a href="https://github.com/Ovilia">Ovilia</a></div>
+
+<h4 align="center">
+	 <img  width="320px" src = "./src/img/overview.gif" />
+</h4>
+
+## How to use
+
++ Clone this repository.
+
++ Run `npm install`.
+
++ Customize your resume in the `./src` directory: edit your `data/dialog.js` and replace your img/*.jpg.
+
++ Preview resumes with `npm run dev`.
+
++ build with `npm run build`.
+
+All files will be compiled to the `dist/` folder.
 
 ## Credits
 
