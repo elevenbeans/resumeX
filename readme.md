@@ -12,6 +12,8 @@
 
 ## How to use
 
++ Star it. (All right, I'm just kidding...)
+
 + Clone this repository.
 
 + Run `npm install`.
