@@ -4,7 +4,7 @@
 </h4>
 <h1 align="center">Elevenbeans 的个人主页</h1>
 
-<div align="center">A special resume/CV/page made with React and LESS. Please visit: <a href="http://elevenbeans.me">http://elevenbeans.me</a>, inspired by <a href="https://github.com/Ovilia">Ovilia</a></div>
+<h4 align="center">A special page/resume/CV made with React and LESS, inspired by <a href="https://github.com/Ovilia">Ovilia</a>.<br /> Please visit: <a href="http://elevenbeans.me">http://elevenbeans.me</a>.</h4>
 
 <h4 align="center">
 	 <img  width="320px" src = "./src/img/overview.gif" />
