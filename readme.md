@@ -7,6 +7,7 @@
 	 <img  width="375px" src = "./src/img/overview.gif" />
 	</div>
 </div>
+
 ## Credits
 
 This project uses several open source packages:
