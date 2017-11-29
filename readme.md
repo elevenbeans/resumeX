@@ -1,12 +1,10 @@
-## <center>Elevenbeans 的个人主页</center>
+<h1 align="center">Elevenbeans 的个人主页</h1>
 
-<center>Please visit: <http://elevenbeans.me>, inspired by [Ovilia](https://github.com/Ovilia)</center>
+<h4 align="center">Please visit: <a href="http://elevenbeans.me">http://elevenbeans.me</a>, inspired by <a href="https://github.com/Ovilia">Ovilia</a></h4>
 
-<div style="display:flex">
-	<div width="375px" style="margin: 0 auto">
+<h4 align="center">
 	 <img  width="375px" src = "./src/img/overview.gif" />
-	</div>
-</div>
+</h4>
 
 ## Credits
 
