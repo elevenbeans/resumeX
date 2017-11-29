@@ -3,9 +3,9 @@
 <center>Please visit: <http://elevenbeans.me>, inspired by [Ovilia](https://github.com/Ovilia)</center>
 
 <div style="display:flex">
-<div width="375px" style="margin: 0 auto">
- <img  width="375px" src = "./src/img/overview.gif" />
-</div>
+	<div width="375px" style="margin: 0 auto">
+	 <img  width="375px" src = "./src/img/overview.gif" />
+	</div>
 </div>
 ## Credits
 
