@@ -2,6 +2,8 @@
 
 Please visit: <http://elevenbeans.me>, inspired by [Ovilia](https://github.com/Ovilia)
 
+![gif](./src/img/overview.gif)
+
 ## Credits
 
 This project uses several open source packages:
