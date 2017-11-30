@@ -2,7 +2,7 @@
 <h4 align="center">
 	 <img  width="75px" src = "https://raw.githubusercontent.com/elevenBeans/Grocery/master/logo.png" />
 </h4>
-<h1 align="center">Elevenbeans 的个人主页</h1>
+<h1 align="center">ResumeX - Elevenbeans 的个人主页</h1>
 
 <div align="center">
 
@@ -31,7 +31,7 @@
 
 + Edit your `./data/dialog.js` to complete your scripts.
 
-+ build with `npm run build`.
++ Build with `npm run build`.
 
 + Publish with github pages.
 
