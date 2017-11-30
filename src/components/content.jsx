@@ -19,7 +19,7 @@ class AppContent extends Component {
   componentDidMount = () => {
     this.initMessage();
   }
-  getRandomWaitingSec = () => Math.floor(Math.random() * 4 + 1) * 1000
+  getRandomWaitingSec = () => Math.floor(Math.random() * 4 + 1) * 1000 // 5 以内的随机数
   initMessage = () => {
     this.setState({
       messageArr: [
@@ -108,7 +108,7 @@ class AppContent extends Component {
           this.getRandomWaitingSec() // mock 请求返回时间
         );
       });
-    }, 1000 // mock 我的响应时间
+    }, 1000 // mock 我的响应时间, 固定 1s
     );
   }
   getRestMessage = (id, index, mySentence) => {

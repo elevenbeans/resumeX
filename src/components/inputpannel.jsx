@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-// import Data from '../data/dialog';
 
 class InputPannel extends Component {
   constructor(props) {

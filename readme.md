@@ -18,15 +18,17 @@
 
 + Run `npm install`.
 
-+ Preview resumes with `npm run dev`.
++ Preview resumes with `npm run dev` (`export NODE_ENV=dev-HMR && npm run dev` to use [HMR](https://webpack.github.io/docs/hot-module-replacement.html)).
 
-+ Customize your resume in the `./src` directory (components and styles)
++ Edit your `./data/header.js` to fill your links and social information.
 
-+ Edit your `data/dialog.js` and replace your `img/*.jpg`.
++ Edit your `./data/dialog.js` to complete your scripts.
 
 + build with `npm run build`.
 
 + Publish with github pages.
+
+Of course you can customize your resume in the `./src` directory (components and styles) if you like.
 
 ## Credits
 

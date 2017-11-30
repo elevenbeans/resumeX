@@ -3,6 +3,7 @@
 var webpack = require('webpack');
 var ExtractTextPlugin = require("extract-text-webpack-plugin");  //css单独打包
 var path = require('path');
+
 console.log(process.env.NODE_ENV);
 
 var config = {
@@ -10,12 +11,12 @@ var config = {
     entry: {
         resume: [   
             __dirname + '/src/index.jsx'
-        ]//唯一入口文件
+        ]
     },
     output: {
-        path: './dist', //打包后的文件存放的地方
-        publicPath: '/dist/', //静态资源文件内的请求路径指向静态资源服务器
-        filename: '[name].bundle.js' //打包后输出文件的文件名
+        path: './dist', // 打包后的文件存放的地方
+        publicPath: '/dist/', // 静态资源文件内的请求路径指向静态资源服务器
+        filename: '[name].bundle.js' // 打包后输出文件的文件名
     },
 
     module: {

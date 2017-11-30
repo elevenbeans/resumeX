@@ -1,62 +1,44 @@
 'use strict';
 import React from 'react';
+import { LINK_CONFIG, SOCIAL_CONFIG } from '../data/header';
+
 
 const AppHeader = () => (
   <header>
     <div className = "app-link">
       <ul>
-        <li>
-          <a
-            target = "_blank"
-            rel = "noopener noreferrer"
-            href = "http://elevenbeans.github.io/"
-          >
-            博客
-          </a>
-        </li>
-        <li>
-          <a
-            target = "_blank"
-            rel = "noopener noreferrer"
-            href = "https://github.com/elevenBeans/Grocery/raw/master/李斌简历_update.pdf"
-          >
-            简历
-          </a>
-        </li>
+        {
+          LINK_CONFIG.map(item => (
+            <li key = {Math.random()}>
+              <a
+                target = "_blank"
+                rel = "noopener noreferrer"
+                href = {item.link}
+              >
+                {item.text}
+              </a>
+            </li>
+          ))
+        }
       </ul>
     </div>
     <div className = "app-social">
       <ul>
-        <li className = "gmail">
-          <a
-            target = "_blank"
-            rel = "noopener noreferrer"
-            href = "mailto:elevenbeansf2e@gmail.com"
-          >
-          </a>
-        </li>
-        <li className = "github">
-          <a
-            target = "_blank"
-            rel="noopener noreferrer"
-            href = "https://github.com/elevenbeans"
-          >
-          </a>
-        </li>
-        <li className = "juejin">
-          <a
-            target = "_blank"
-            rel = "noopener noreferrer"
-            href = "https://juejin.im/user/587fce9361ff4b006522519e">
-          </a>
-        </li>
-        <li className = "zhihu">
-          <a
-            target = "_blank"
-            rel = "noopener noreferrer"
-            href = "https://www.zhihu.com/people/shi-yike-dou-zi/activities">
-          </a>
-        </li>
+        {
+          SOCIAL_CONFIG.map(item => (
+            <li
+              className = {item.type}
+              key = {Math.random()}
+            >
+              <a
+                target = "_blank"
+                rel = "noopener noreferrer"
+                href = {item.link}
+              >
+              </a>
+            </li>
+          ))
+        }
       </ul>
     </div>
   </header>
