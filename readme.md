@@ -4,8 +4,10 @@
 </h4>
 <h1 align="center">Elevenbeans 的个人主页</h1>
 
+<div align="center">
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](CONTRIBUTING.md#pull-requests)
 [![GitHub license](https://img.shields.io/github/license/mashape/apistatus.svg)](https://mit-license.org)
+</div>
 
 <h4 align="center">A special resume/CV or personal homepage made with React and LESS, inspired by <a href="https://github.com/Ovilia">Ovilia</a>.<br /> Please visit: <a href="http://elevenbeans.me">http://elevenbeans.me</a>.</h4>
 
