@@ -1,3 +1,7 @@
+<div align="center">
+<img width = "100px" src="./src/img/rx.png" />
+</div>
+
 <h1 align="center">ResumeX</h1>
 
 <div align="center">
