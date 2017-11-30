@@ -1,5 +1,5 @@
-<div align="center" >
-<img width = "120px" src="./src/img/rx.svg" />
+<div align="center">
+<img width="120px" src="./src/img/rx.svg" />
 </div>
 
 <h1 align="center">ResumeX</h1>

@@ -1,15 +1,22 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
-<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="300px" height="300px" viewBox="0 0 300 300" enable-background="new 0 0 300 300" xml:space="preserve">  <image id="image0" width="300" height="300" x="0" y="0"
-    xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAAEsBAMAAACLU5NGAAAABGdBTUEAALGPC/xhBQAAACBjSFJN
-AAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAIVBMVEUAAAD///8DZtYDZdUE
-ZtUFZdQFZtMHZtIGZtIEZdT///+DtTfyAAAAAnRSTlMAP8D14AUAAAABYktHRAH/Ai3eAAAAB3RJ
-TUUH4QseDgkHk+Jw2gAAAS9JREFUeNrt2TENAkEQhtEDBeCAXEkJOAANeMABDvCyKulpLll2mdnj
-fQpepvqTmSZJWmo7J+iAhYWVICwsrGgSFhYWFhYWFhYWFhbWSliX+/P1uJ6yseb5fEt4rYWwsKJY
-x/IRFhYWFlZrVmkaFhYWFhYWFhbWIKyOYWFhjcAKCgsLK5qEhfVVvq8Nw2rJSrq3sLCwsKpYpWlY
-WFhYWFhYWFiDsDqGhYWFVc0KCgsLK5qEhYWFhfUzVtIZiIWFhVXFKk3DwsLCwsLCwsIahNUxLCws
-rGpWUFhYWNEkLCwsLKx/ZyVdp1hYWFhrYpWmYWFhYWFhYWFhDcLqGBYW1gisoLCwsKJJWFhYWFhY
-WFhYWFhYWFhYWFhYWFjhYWFhRZOwVsva7BO0myRJkiQN3RtXLTqsThozagAAACV0RVh0ZGF0ZTpj
-cmVhdGUAMjAxNy0xMS0zMFQxNDowOTowNyswODowMF8PN14AAAAldEVYdGRhdGU6bW9kaWZ5ADIw
-MTctMTEtMzBUMTQ6MDk6MDcrMDg6MDAuUo/iAAAAAElFTkSuQmCC" />
+<svg width="200" height="200" xmlns="http://www.w3.org/2000/svg">
+ <!-- Created with Method Draw - http://github.com/duopixel/Method-Draw/ -->
+ <g>
+  <title>background</title>
+  <rect fill="#1166d8" id="canvas_background" height="202" width="202" y="-1" x="-1"/>
+  <g display="none" overflow="visible" y="0" x="0" height="100%" width="100%" id="canvasGrid">
+   <rect fill="url(#gridpattern)" stroke-width="0" y="0" x="0" height="100%" width="100%"/>
+  </g>
+ </g>
+ <g>
+  <title>Layer 1</title>
+  <rect stroke="#000" id="svg_1" height="30" width="30.999999" y="22.5" x="30.5" stroke-width="0" fill="#ffffff"/>
+  <rect id="svg_2" height="0" width="1" y="144.5" x="156.5" stroke-width="1.5" stroke="#000" fill="#ffffff"/>
+  <rect stroke="#000" id="svg_3" height="30" width="30.999999" y="65.5" x="30.5" stroke-width="0" fill="#ffffff"/>
+  <rect stroke="#000" id="svg_4" height="30" width="30.999999" y="150.5" x="30.5" stroke-width="0" fill="#ffffff"/>
+  <rect stroke="#000" id="svg_5" height="14" width="96.000001" y="31.5" x="76.500001" stroke-width="0" fill="#ffffff"/>
+  <rect stroke="#000" id="svg_10" height="14" width="96.000001" y="73.5" x="76.500001" stroke-width="0" fill="#ffffff"/>
+  <rect stroke="#000" id="svg_11" height="14" width="96.000001" y="158.5" x="76.500001" stroke-width="0" fill="#ffffff"/>
+  <rect stroke="#000" id="svg_12" height="30" width="30.999999" y="108.5" x="30.5" stroke-width="0" fill="#ffffff"/>
+  <rect stroke="#000" id="svg_13" height="14" width="96.000001" y="117.5" x="76.500001" stroke-width="0" fill="#ffffff"/>
+ </g>
 </svg>
