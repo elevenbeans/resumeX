@@ -12,7 +12,7 @@ export default {
     {
       id: 1000,
       details: [
-        'Hello 老铁，很高兴你能来看看，随便聊会儿天呗！IPhoneX 你感觉如何？'
+        'Hi 老铁，很高兴你能来看看，随便聊会儿天呗！IPhoneX 你感觉如何？'
       ],
       responses: [
         {
@@ -99,13 +99,27 @@ export default {
         '聊不下去了。。。'
       ]
     },
-    { // job
+    {
       id: 4000,
+      details: [
+        'OK！最近呢，在跟同事一起搞事情！',
+        '<a href="https://github.com/CtripFE/irdc-components" target="_blank">https://github.com/CtripFE/irdc-components</a>'
+      ],
+      hasMore: 40000
+    },
+    { // job
+      id: 40000,
       details: [
         '这个是我负责的航班动态: ',
         '<a href="https://english.ctrip.com/flightsh5/status/" target="_blank">https://english.ctrip.com/flightsh5/status/</a>',
-        '<img src = "./src/img/flight-status.png" />',
-        '<br />这个是我们团队的 Web APP: ',
+        '<img src = "./src/img/flight-status.png" />'
+      ],
+      hasMore: 40001
+    },
+    {
+      id: 40001,
+      details: [
+        '<br />还有，是我们团队的 Web APP: ',
         '<a href="https://english.ctrip.com/m/flights/" target="_blank">https://english.ctrip.com/m/flights/</a>',
         '<img src = "./src/img/flight-main.png" />',
         '<br />职业，显而易见了吧？'
