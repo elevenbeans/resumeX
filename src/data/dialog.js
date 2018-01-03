@@ -119,7 +119,7 @@ export default {
     {
       id: 40001,
       details: [
-        '<br />还有，是我们团队的 Web APP: ',
+        '还有，是我们团队的 Web APP: ',
         '<a href="https://english.ctrip.com/m/flights/" target="_blank">https://english.ctrip.com/m/flights/</a>',
         '<img src = "./src/img/flight-main.png" />',
         '<br />职业，显而易见了吧？'
