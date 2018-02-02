@@ -9,7 +9,7 @@ console.log(process.env.NODE_ENV);
 var config = {
     //devtool: 'eval-source-map',
     entry: {
-        resume: [   
+        resume: [
             __dirname + '/src/index.jsx'
         ]
     },
@@ -24,6 +24,7 @@ var config = {
             { test: /\.(js|jsx)$/, loader: "jsx!babel", include: /src/},
             {
                 test: /\.js$|\.jsx$/,
+                include: /src/,
                 exclude: /node_modules/,
                 loader: 'eslint-loader'
             },
@@ -43,7 +44,7 @@ var config = {
         port: 8080,
         colors: true,  // 终端中输出结果为彩色
         // historyApiFallback: true,  // 不跳转
-        inline: true,  
+        inline: true,
         hot: process.env.NODE_ENV === 'dev-HMR' //Hot module replacement
     },
     resolve: {
