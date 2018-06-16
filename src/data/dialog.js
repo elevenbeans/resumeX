@@ -103,7 +103,7 @@ export default {
       id: 4000,
       details: [
         'OK！最近呢，在跟同事一起搞事情！',
-        '<a href="https://github.com/CtripFE/irdc-components" target="_blank">https://github.com/CtripFE/irdc-components</a>'
+        '<a href="https://github.com/CtripFE/triplet" target="_blank">https://github.com/CtripFE/triplet</a>'
       ],
       hasMore: 40000
     },
