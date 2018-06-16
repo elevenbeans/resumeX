@@ -1,8 +1,8 @@
-import React, { Component } from 'react'
+import React from 'react';
 // import PropTypes from 'prop-types'
-import ReactDOM from 'react-dom'
-import { createStore } from 'redux'
-import { Provider, connect } from 'react-redux'
+import ReactDOM from 'react-dom';
+import { createStore } from 'redux';
+import { Provider } from 'react-redux';
 
 import reducer from './reducers/reducer';
 
@@ -13,14 +13,14 @@ import AppFooter from './components/footer';
 import './style/index.less';
 
 // React component
-const App = () =>	(
+const App = () => (
   // const { value, onIncreaseClick } = this.props
   <div className = "app-wrapper">
-  	<AppHeader />
-  	<AppContent />
+    <AppHeader />
+    <AppContent />
     <AppFooter />
   </div>
-)
+);
 
 // Counter.propTypes = {
 //   value: PropTypes.number.isRequired,
@@ -31,7 +31,7 @@ const App = () =>	(
 // const increaseAction = { type: 'increase' }
 
 // Store
-const store = createStore(reducer)
+const store = createStore(reducer);
 
 // Map Redux state to component props
 // function mapStateToProps(state) {
@@ -58,4 +58,4 @@ ReactDOM.render(
     <App />
   </Provider>,
   document.getElementById('app')
-)
+);
