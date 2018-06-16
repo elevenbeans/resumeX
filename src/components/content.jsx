@@ -49,7 +49,8 @@ class AppContent extends Component {
       text: [
         this.findSentence(
           this.state.preId
-        ).responses ?
+        ).responses
+          ?
           this.findSentence(
             this.state.preId
           ).responses[index].content
@@ -80,20 +81,25 @@ class AppContent extends Component {
     }
     setTimeout(
       () => {
-        this.setState({
-          messageArr: tempArr,
-          preId: id,
-          status: '对方正在输入 ...',
-          inputDisabled: true
-        }, () => {
-          this.scrollBottom();
-          setTimeout(
-            () => this.getRestMessage(id, index, _mySentence, _userSentence),
-            this.getRandomWaitingSec() // mock 请求返回时间
-          );
-        });
+        this.getMoreResponce(tempArr, id, index, _mySentence);
+      }, 1000 // mock 我的响应时间, 固定 1s
+    );
+  }
+  getMoreResponce = (arr, id, index, sentence) => {
+    this.setState(
+      {
+        messageArr: arr,
+        preId: id,
+        status: '对方正在输入 ...',
+        inputDisabled: true
       },
-      1000 // mock 我的响应时间
+      () => {
+        this.scrollBottom();
+        setTimeout(
+          () => this.getRestMessage(id, index, sentence),
+          this.getRandomWaitingSec() // mock 请求返回时间
+        );
+      }
     );
   }
   getRestMessage = (id, index, mySentence) => {
