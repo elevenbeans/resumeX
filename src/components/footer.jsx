@@ -1,7 +1,8 @@
-'use strict'
+import React from 'React';
 
 const AppFooter = () => (
-	<footer>Elevenbeans' site. Inspired by&nbsp;
+  <footer>
+    Elevenbeans' site. Inspired by&nbsp;
     <a
       href = "https://github.com/Ovilia"
       target = "_blank"
@@ -9,6 +10,6 @@ const AppFooter = () => (
       Ovilia
     </a>
   </footer>
-)
+);
 
 export default AppFooter;
