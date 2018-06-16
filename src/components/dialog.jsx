@@ -3,9 +3,9 @@ import Loading from './loading';
 
 import '../style/dialog.less';
 
-const Dialog = (props) => (
+const Dialog = props => (
   <div className="app-lialog">
-    {props.messageArr.map((item)=>(
+    {props.messageArr.map(item=>(
       <div key = {Math.random()}>
         <div
           className = {

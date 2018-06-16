@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import Dialog from './dialog';
 import InputPannel from './inputpannel';
-
 import Data from '../data/dialog';
 
 class AppContent extends Component {
@@ -17,11 +16,11 @@ class AppContent extends Component {
     };
   }
   componentDidMount = () => {
-    this.initMessage();
-  }
-  getRandomWaitingSec = () => Math.floor(Math.random() * 4 + 1) * 1000
-  initMessage = () => {
-    this.setState({
+    const {
+      initDefaultMsg,
+      getFirstMsg
+    } = this.props;
+    initDefaultMsg({
       messageArr: [
         {
           isUser: false,
@@ -29,26 +28,13 @@ class AppContent extends Component {
         }
       ],
       pannelArr: Data.fromUser
-    }, () => {
-      setTimeout(
-        () => this.getFirstMessage(1000),
-        this.getRandomWaitingSec() // mock 请求返回时间
-      );
     });
+    setTimeout(
+      () => { getFirstMsg(1000); },
+      this.getRandomWaitingSec() // mock 请求返回时间
+    );
   }
-  getFirstMessage = id => {
-    this.setState({
-      messageArr: [
-        {
-          isUser: false,
-          text: this.findSentence(id).details.join('')
-        }
-      ],
-      pannelArr: this.findSentence(id).responses || Data.fromUser,
-      status: '请输入 ...',
-      inputDisabled: false
-    });
-  }
+  getRandomWaitingSec = () => Math.floor(Math.random() * 4 + 1) * 1000
   selectResponce = (id, index, hasMore) => {
     var _emptySentence = {
       isUser: false,
@@ -92,21 +78,22 @@ class AppContent extends Component {
         this.scrollBottom();
       });
     }
-    setTimeout(() => {
-      this.setState({
-        messageArr: tempArr,
-        preId: id,
-        status: '对方正在输入 ...',
-        inputDisabled: true
-      }, () => {
-        this.scrollBottom();
-        setTimeout(
-          () => this.getRestMessage(id, index, _mySentence, _userSentence),
-          this.getRandomWaitingSec() // mock 请求返回时间
-        );
-      });
-    },
-    1000 // mock 我的响应时间
+    setTimeout(
+      () => {
+        this.setState({
+          messageArr: tempArr,
+          preId: id,
+          status: '对方正在输入 ...',
+          inputDisabled: true
+        }, () => {
+          this.scrollBottom();
+          setTimeout(
+            () => this.getRestMessage(id, index, _mySentence, _userSentence),
+            this.getRandomWaitingSec() // mock 请求返回时间
+          );
+        });
+      },
+      1000 // mock 我的响应时间
     );
   }
   getRestMessage = (id, index, mySentence) => {
@@ -137,23 +124,19 @@ class AppContent extends Component {
     ));
   }
   scrollBottom() {
-    var _el = document.getElementById("J_scroll");
+    var _el = document.getElementById('J_scroll');
     _el.scrollTop = _el.scrollHeight;
   }
-  onShowInputPannel = () => {
-    if (!this.state.inputDisabled) {
-      this.setState({
-        inputPannelOn: true
-      });
-    }
-  }
   render() {
-    let {
+    const {
       inputPannelOn,
       onShowInputPannel,
+      messageArr,
+      pannelArr,
       onCloseInputPannel
     } = this.props;
-
+    console.log('messageArr:', messageArr);
+    console.log('pannelArr:', pannelArr);
     return (
       <div className = "app-phone" >
         <div className = "phone-wrapper">
@@ -165,7 +148,7 @@ class AppContent extends Component {
                 onSelectResponce = {
                   this.selectResponce
                 }
-                pannelArr = {this.state.pannelArr}
+                pannelArr = {pannelArr}
                 preId = {this.state.preId}
               />
             </div>
@@ -174,7 +157,7 @@ class AppContent extends Component {
             <div className = "message-padding"></div>
             <div className = "message-content" id = "J_scroll">
               <Dialog
-                messageArr = {this.state.messageArr}
+                messageArr = {messageArr}
               />
             </div>
           </div>

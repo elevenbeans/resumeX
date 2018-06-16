@@ -1,4 +1,6 @@
 // Reducer
+import Data from '../data/dialog';
+
 const DEFAULT_VALUE = {
   inputPannelOn: false,
   messageArr: [],
@@ -8,6 +10,10 @@ const DEFAULT_VALUE = {
   inputDisabled: true
 };
 
+const findSentence = id => Data.fromElevenBeans.find(item => (
+  item.id == id
+));
+
 const reducer = (state = DEFAULT_VALUE, action) => {
   // const count = state.count;
   switch (action.type) {
@@ -15,10 +21,25 @@ const reducer = (state = DEFAULT_VALUE, action) => {
     return {
       inputPannelOn: action.onSwitch
     };
-  case 'SELECT_RESPONCE':
+  case 'INIT_DEFAULT_MSG':
     return {
-      inputPannelOn: false
+      messageArr: action.defaultMsg.messageArr,
+      pannelArr: action.defaultMsg.pannelArr
     };
+  case 'GET_FIRST_MSG':
+    return {
+      messageArr: [
+        {
+          isUser: false,
+          text: findSentence(action.firstMsgId).details.join('')
+        }
+      ],
+      pannelArr: findSentence(action.firstMsgId).responses || Data.fromUser,
+      status: '请输入 ...',
+      inputDisabled: false
+    };
+  case 'SELECT_RESPONSE':
+    return {};
   default:
     return state;
   }
