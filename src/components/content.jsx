@@ -94,9 +94,16 @@ class AppContent extends Component {
         this.scrollBottom();
       });
     }
-    setTimeout(() => {
-      this.setState({
-        messageArr: tempArr,
+    setTimeout(
+      () => {
+        this.getMoreResponce(tempArr, id, index, _mySentence);
+      }, 1000 // mock 我的响应时间, 固定 1s
+    );
+  }
+  getMoreResponce = (arr, id, index, sentence) => {
+    this.setState(
+      {
+        messageArr: arr,
         preId: id,
         status: '对方正在输入 ...',
         inputDisabled: true
@@ -104,11 +111,10 @@ class AppContent extends Component {
       () => {
         this.scrollBottom();
         setTimeout(
-          () => this.getRestMessage(id, index, _mySentence),
+          () => this.getRestMessage(id, index, sentence),
           this.getRandomWaitingSec() // mock 请求返回时间
         );
-      });
-    }, 1000 // mock 我的响应时间, 固定 1s
+      }
     );
   }
   getRestMessage = (id, index, mySentence) => {
