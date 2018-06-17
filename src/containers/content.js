@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import {
   toggleInputPannelAction,
   initDefaultMsgAction,
-  getFirstMsgAction,
+  // getFirstMsgAction,
   selectResponseAction
 } from '../actions/content';
 
@@ -14,16 +14,17 @@ import Content from '../components/content';
 const mapStateToProps = state => ({
   inputPannelOn: state.inputPannelOn,
   messageArr: state.messageArr || [],
-  pannelArr: state.pannelArr || []
+  pannelArr: state.pannelArr || [],
+  preId: state.preId,
+  status: state.status
 });
 
 // Map Redux actions to component props
 const mapDispatchToProps = dispatch => ({
-  onShowInputPannel: () => dispatch(toggleInputPannelAction(true)),
-  onCloseInputPannel: () => dispatch(toggleInputPannelAction(false)),
-  initDefaultMsg: defaultMsg => dispatch(initDefaultMsgAction(defaultMsg)),
-  getFirstMsg: firstMsgId => dispatch(getFirstMsgAction(firstMsgId)),
-  selectResponceAction: () => dispatch(selectResponseAction())
+  onShowInputPannel: () => toggleInputPannelAction(dispatch, true),
+  onCloseInputPannel: () => toggleInputPannelAction(dispatch, false),
+  initDefaultMsg: defaultMsg => initDefaultMsgAction(dispatch, defaultMsg),
+  selectResponse: (id, index, hasMore) => selectResponseAction(dispatch, id, index, hasMore)
 });
 
 // Connected Component

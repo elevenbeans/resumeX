@@ -1,21 +1,119 @@
-export const toggleInputPannelAction = onSwitch => ({
+import Data from '../data/dialog';
+
+const findSentence = id => Data.fromElevenBeans.find(item => (
+  item.id == id
+));
+
+const getToggleInputPannelAction = onSwitch => ({
   type: 'TOGGLE_PANNEL',
   onSwitch
 });
 
-export const initDefaultMsgAction = defaultMsg => ({
+const getInitDefaultMsgAction = defaultMsg => ({
   type: 'INIT_DEFAULT_MSG',
   defaultMsg
 });
 
-export const getFirstMsgAction = firstMsgId => ({
+const getFirstMsgAction = firstMsgId => ({
   type: 'GET_FIRST_MSG',
   firstMsgId
 });
 
-export const selectResponseAction = (id, index, hasMore) => ({
-  type: 'SELECT_RESPONSE',
+const getSelectResponseAction = (id, index, hasMore) => (dispatch, getState) => {
+  dispatch({
+    type: 'SELECT_RESPONSE',
+    id,
+    index,
+    hasMore
+  });
+  const state = getState();
+  const _emptySentence = {
+    isUser: false,
+    text: ''
+  };
+  const _mySentence = {
+    isUser: false,
+    text: findSentence(id).details.join('')
+  };
+  var _userSentence = {
+    isUser: true,
+    text: [
+      findSentence(
+        state.preId
+      ).responses
+        ?
+        findSentence(
+          state.preId
+        ).responses[index].content
+        :
+        Data.fromUser[index].content
+    ]
+  };
+  var tempArr = [];
+  if (hasMore) {
+    tempArr = [
+      ...state.messageArr,
+      _emptySentence
+    ];
+  } else {
+    tempArr = [
+      ...state.messageArr,
+      _userSentence,
+      _emptySentence
+    ];
+  }
+  setTimeout(
+    () => {
+      dispatch(getMoreResponseAction(tempArr, id, index, _mySentence));
+    }, 1000 // mock 我的响应时间, 固定 1s
+  );
+  setTimeout(
+    () => {
+      dispatch(getRestResponseAction(id, index, _mySentence));
+    }, 3000 // mock 我的响应时间, 固定 1s
+  );
+};
+
+const getMoreResponseAction = (arr, id, index, sentence) => ({
+  type: 'GET_MORE_RESPONSE',
+  arr,
   id,
   index,
-  hasMore
+  sentence
 });
+
+const getRestResponseAction = (id, index, mySentence) => dispatch => {
+  dispatch({
+    type: 'GET_REST_RESPONSE',
+    id,
+    index,
+    mySentence
+  });
+  if (findSentence(id).hasMore) {
+    dispatch(
+      getSelectResponseAction(
+        findSentence(id).hasMore,
+        index,
+        true
+      )
+    );
+  }
+};
+
+const getRandomWaitingSec = () => Math.floor(Math.random() * 4 + 1) * 1000;
+
+export const toggleInputPannelAction = (dispatch, onSwitch) => {
+  dispatch(getToggleInputPannelAction(onSwitch));
+};
+
+export const initDefaultMsgAction = (dispatch, defaultMsg) => {
+  dispatch(getInitDefaultMsgAction(defaultMsg));
+  setTimeout(
+    () => { dispatch(getFirstMsgAction(1000)); },
+    getRandomWaitingSec() // mock 请求返回时间
+  );
+};
+
+export const selectResponseAction = (dispatch, id, index, hasMore) => {
+  dispatch(getSelectResponseAction(id, index, hasMore));
+};
