@@ -14,25 +14,22 @@ const findSentence = id => Data.fromElevenBeans.find(item => (
   item.id == id
 ));
 
-// const scrollBottom = () => {
-//   var _el = document.getElementById('J_scroll');
-//   _el.scrollTop = _el.scrollHeight;
-// };
-
 const reducer = (state = DEFAULT_VALUE, action) => {
   switch (action.type) {
   case 'TOGGLE_PANNEL':
     return {
-      inputPannelOn: action.onSwitch,
+      inputPannelOn: action.onSwitch && !state.inputDisabled,
       messageArr: state.messageArr,
       pannelArr: state.pannelArr,
-      preId: state.preId
+      preId: state.preId,
+      status: state.status
     };
   case 'INIT_DEFAULT_MSG':
     return {
       messageArr: action.defaultMsg.messageArr,
       pannelArr: action.defaultMsg.pannelArr,
-      preId: state.preId
+      preId: state.preId,
+      inputDisabled: true
     };
   case 'GET_FIRST_MSG':
     return {
@@ -63,7 +60,6 @@ const reducer = (state = DEFAULT_VALUE, action) => {
       ]
     };
     if (!action.hasMore) {
-      // scrollBottom();
       return {
         messageArr: [
           ...state.messageArr,
@@ -71,14 +67,12 @@ const reducer = (state = DEFAULT_VALUE, action) => {
         ],
         pannelArr: state.pannelArr,
         preId: state.preId,
-        inputPannelOn: state.inputPannelOn
+        inputPannelOn: state.inputPannelOn,
+        inputDisabled: true
       };
     } else {
       return {
-        messageArr: [
-          ...state.messageArr
-          // _emptySentence
-        ],
+        messageArr: state.messageArr,
         preId: state.preId,
         status: '对方正在输入 ...',
         inputDisabled: true

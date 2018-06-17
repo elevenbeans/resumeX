@@ -4,6 +4,11 @@ const findSentence = id => Data.fromElevenBeans.find(item => (
   item.id == id
 ));
 
+const scrollBottom = () => {
+  var _el = document.getElementById('J_scroll');
+  _el.scrollTop = _el.scrollHeight;
+};
+
 const getToggleInputPannelAction = onSwitch => ({
   type: 'TOGGLE_PANNEL',
   onSwitch
@@ -62,14 +67,17 @@ const getSelectResponseAction = (id, index, hasMore) => (dispatch, getState) => 
     index,
     hasMore
   });
+  scrollBottom();
   setTimeout(
     () => {
       dispatch(getMoreResponseAction(tempArr, id, index, _mySentence));
+      scrollBottom();
     }, 1000 // mock 我的响应时间, 固定 1s
   );
   setTimeout(
     () => {
       dispatch(getRestResponseAction(id, index, _mySentence));
+      scrollBottom();
     }, 3000 // mock 我的响应时间, 固定 1s
   );
 };
@@ -89,6 +97,7 @@ const getRestResponseAction = (id, index, mySentence) => dispatch => {
     index,
     mySentence
   });
+  scrollBottom();
   if (findSentence(id).hasMore) {
     dispatch(
       getSelectResponseAction(
@@ -97,6 +106,7 @@ const getRestResponseAction = (id, index, mySentence) => dispatch => {
         true
       )
     );
+    scrollBottom();
   }
 };
 

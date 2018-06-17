@@ -5,8 +5,10 @@ var ExtractTextPlugin = require('extract-text-webpack-plugin');  // css单独打
 var path = require('path');
 console.log(process.env.NODE_ENV);
 
+const isDev = process.env.NODE_ENV === 'dev-HRM';
+
 var config = {
-  devtool: 'eval-source-map',
+  devtool: isDev ? 'eval-source-map' : '',
   entry: {
     resume: [
       __dirname + '/src/index.jsx'
