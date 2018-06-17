@@ -20,12 +20,6 @@ const getFirstMsgAction = firstMsgId => ({
 });
 
 const getSelectResponseAction = (id, index, hasMore) => (dispatch, getState) => {
-  dispatch({
-    type: 'SELECT_RESPONSE',
-    id,
-    index,
-    hasMore
-  });
   const state = getState();
   const _emptySentence = {
     isUser: false,
@@ -62,6 +56,12 @@ const getSelectResponseAction = (id, index, hasMore) => (dispatch, getState) => 
       _emptySentence
     ];
   }
+  dispatch({
+    type: 'SELECT_RESPONSE',
+    id,
+    index,
+    hasMore
+  });
   setTimeout(
     () => {
       dispatch(getMoreResponseAction(tempArr, id, index, _mySentence));

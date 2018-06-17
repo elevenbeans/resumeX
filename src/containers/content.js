@@ -7,8 +7,6 @@ import {
   selectResponseAction
 } from '../actions/content';
 
-// import {} from ''; 看一下 book 怎么玩的
-
 import Content from '../components/content';
 
 const mapStateToProps = state => ({

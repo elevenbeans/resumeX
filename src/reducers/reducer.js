@@ -14,10 +14,10 @@ const findSentence = id => Data.fromElevenBeans.find(item => (
   item.id == id
 ));
 
-const scrollBottom = () => {
-  var _el = document.getElementById('J_scroll');
-  _el.scrollTop = _el.scrollHeight;
-};
+// const scrollBottom = () => {
+//   var _el = document.getElementById('J_scroll');
+//   _el.scrollTop = _el.scrollHeight;
+// };
 
 const reducer = (state = DEFAULT_VALUE, action) => {
   switch (action.type) {
@@ -73,8 +73,17 @@ const reducer = (state = DEFAULT_VALUE, action) => {
         preId: state.preId,
         inputPannelOn: state.inputPannelOn
       };
+    } else {
+      return {
+        messageArr: [
+          ...state.messageArr
+          // _emptySentence
+        ],
+        preId: state.preId,
+        status: '对方正在输入 ...',
+        inputDisabled: true
+      };
     }
-    break;
   case 'GET_MORE_RESPONSE':
     return {
       messageArr: action.arr,
@@ -84,6 +93,7 @@ const reducer = (state = DEFAULT_VALUE, action) => {
       inputPannelOn: state.inputPannelOn
     };
   case 'GET_REST_RESPONSE':
+    state.messageArr.pop();
     return {
       messageArr: [
         ...state.messageArr,
